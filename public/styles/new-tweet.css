@@ -17,6 +17,7 @@ main section form label {
 .tweet-button-counter-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1em;
 }
 
 .tweet-button-counter-container button {
