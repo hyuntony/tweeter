@@ -1,0 +1,35 @@
+nav {
+  top: 0px;
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  font-size: 1.7em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 9;
+}
+nav span {
+  font-family: 'Bungee', sans-serif;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+}
+
+.div-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5em;
+  font-size: 0.6em;
+  margin-bottom: 0.5em;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.fa-angle-double-down {
+  color: orangered;
+}
+
+

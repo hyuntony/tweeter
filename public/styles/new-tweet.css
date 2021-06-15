@@ -1,0 +1,8 @@
+#tweet-text {
+  width: 100%;
+  background-color: #f4f1ec;
+}
+.tweet-button-counter-container {
+  display: flex;
+  justify-content: space-between;
+}
