@@ -13,3 +13,8 @@
   display: flex;
   justify-content: space-between;
 }
+.tweet-button-counter-container button {
+  font-family: 'Bungee', sans-serif;
+  background-color: #4051a1;
+  color: #FFFFFF;
+}
