@@ -9,12 +9,23 @@
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
 }
+
+main section form label {
+  color: #656159;
+}
+
 .tweet-button-counter-container {
   display: flex;
   justify-content: space-between;
 }
+
 .tweet-button-counter-container button {
   font-family: 'Bungee', sans-serif;
   background-color: #4051a1;
   color: #FFFFFF;
+}
+
+.counter {
+  font-family: 'Bungee', sans-serif;
+  color:
 }
