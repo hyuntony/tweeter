@@ -1,0 +1,72 @@
+article.tweet {
+  border-style: solid;
+  margin-bottom: 1em;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px #c9cae2;
+}
+
+article .header {
+  width: 95%;
+  margin: 0.8em auto 1em auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.image-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.face-image {
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
+}
+
+article .user-id {
+  color: #c9d0e4;
+  font-weight: bold;
+}
+
+article .underline {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  height: 25px;
+  width: 98%;
+  margin: auto;
+}
+
+article .text {
+  width: 95%;
+  margin: auto;
+  font-weight: bold;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .icon-container {
+  display: flex;
+  font-size: medium;
+  margin-right: 2em;
+  margin-top: 0.5em;
+  width: 4em;
+  justify-content: space-between;
+  color: #4055a1;
+}
+
+footer .icon-container i:hover {
+  color: #aa9256;
+}
+
+.time-passed {
+  margin: 1em;
+  font-size: 16px;
+  margin-left: 2em;
+}
