@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const $tweet = `
     <article class="tweet">
@@ -16,7 +22,7 @@ const createTweetElement = function(tweet) {
           <p class="user-id">${tweet.user.handle}</p>
       </header>
         <div>
-          <div class="text">${tweet.content.text}</div>
+          <div class="text">${escape(tweet.content.text)}</div>
           <div class="underline"></div>
         </div>
       <footer>
