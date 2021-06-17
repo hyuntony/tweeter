@@ -20,7 +20,7 @@ const createTweetElement = function(tweet) {
           <div class="underline"></div>
         </div>
       <footer>
-        <div class="time-passed">${tweet["created_at"]}</div>
+        <div class="time-passed">${timeago.format(tweet["created_at"])}</div>
         <div class="icon-container">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -52,7 +52,16 @@ $(document).ready(function() {
       method: 'POST',
       data: $(this).serialize()
     };
-    $.ajax(request);
+    const textArea = $(this).find('#tweet-text').val();
+    if (textArea === "") {
+      alert('Message is not present');
+    } else if (textArea.length > 140) {
+      alert('Message is too long');
+    } else {
+      $.ajax(request);
+      $(this).find('#tweet-text').val('');
+    }
     event.preventDefault();
+    
   });
 });
