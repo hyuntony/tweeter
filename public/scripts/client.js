@@ -68,6 +68,7 @@ $(document).ready(function() {
       $('.error-message').text('Message is too long').slideDown();
     } else {
       $('.error-message').text('Message is too long').hide();
+      
       $.ajax(request)
         .then(() => {
           $.ajax('/tweets', { method: 'GET' })
