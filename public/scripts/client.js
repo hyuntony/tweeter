@@ -53,6 +53,7 @@ $(document).ready(function() {
       data: $(this).serialize()
     };
     const textArea = $(this).find('#tweet-text').val();
+
     if (textArea === "") {
       alert('Message is not present');
     } else if (textArea.length > 140) {
@@ -61,7 +62,14 @@ $(document).ready(function() {
       $.ajax(request);
       $(this).find('#tweet-text').val('');
     }
+
     event.preventDefault();
-    
+
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function(tweets) {
+        const $tweet = $(`<div></div>`);
+        $tweet.append(createTweetElement(tweets[tweets.length - 1]));
+        $('#tweets-container').prepend($tweet);
+      });
   });
 });
