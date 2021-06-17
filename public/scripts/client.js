@@ -65,6 +65,16 @@ const renderTweets = function(tweets) {
 };
 
 $(document).ready(function() {
-  const $tweets = renderTweets(data);
-  $('#tweets-container').append($tweets);
+  console.log($('.tweet-form'));
+  $('.tweet-form').submit(function(event) {
+    const request = {
+      url: '/tweets',
+      method: 'POST',
+      data: $(this).serialize()
+    };
+    $.ajax(request);
+    event.preventDefault();
+  });
+//   const $tweets = renderTweets(data);
+//   $('#tweets-container').append($tweets);
 });
