@@ -39,8 +39,8 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
   let $tweets = $(`<div></div>`);
-  for (const tweet of tweets) {
-    $tweets.append(createTweetElement(tweet));
+  for (let i = tweets.length - 1; i > -1; i--) {
+    $tweets.append(createTweetElement(tweets[i]));
   }
   return $tweets;
 };
@@ -67,8 +67,8 @@ $(document).ready(function() {
     } else if (textArea.length > 140) {
       $('.error-message').text('Message is too long').slideDown();
     } else {
-      $('.error-message').text('Message is too long').hide();
-      
+      $('.error-message').text('Message is too long').slideUp();
+
       $.ajax(request)
         .then(() => {
           $.ajax('/tweets', { method: 'GET' })
@@ -79,6 +79,7 @@ $(document).ready(function() {
             });
         });
       $(this).find('#tweet-text').val('');
+      $('.counter').text(140);
     }
   });
 });

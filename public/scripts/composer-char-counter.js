@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  const textarea1 = $('#tweet-text');
-  textarea1.on('input', function() {
+  $('#tweet-text').on('input', function() {
     const currentCount = ($(this).val().length);
     const counter = $(this).closest('.tweet-form').find('.counter');
     const countRemain = 140 - currentCount;

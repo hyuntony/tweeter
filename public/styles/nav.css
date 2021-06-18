@@ -3,6 +3,8 @@ nav {
   position: fixed;
   height: 80px;
   width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
   font-size: 1.7em;
   background-color: goldenrod;
   color: #FFFFFF;
@@ -13,7 +15,6 @@ nav {
 }
 nav span {
   font-family: 'Bungee', sans-serif;
-  margin-left: 1.5em;
   margin-bottom: 0.5em;
   align-self: flex-end;
 }
@@ -21,11 +22,15 @@ nav span {
 .div-container {
   display: flex;
   flex-direction: column;
-  margin-right: 1.5em;
   font-size: 0.6em;
   margin-bottom: 0.5em;
   justify-content: flex-end;
   align-items: center;
+}
+
+.compose-button {
+  background-color: transparent;
+  border: none;
 }
 
 .fa-angle-double-down {
