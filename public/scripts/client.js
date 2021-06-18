@@ -4,14 +4,16 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//
-const escape = function(str) {
+//function that converts potentially insecure text by
+//converting them into safe "encoded representation" by escaping
+const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const createTweetElement = function(tweet) {
+//function that intakes a tweet and creates a node
+const createTweetElement = function (tweet) {
   const $tweet = `
     <article class="tweet">
       <header class="header">
@@ -38,7 +40,8 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-const renderTweets = function(tweets) {
+//takes a array of tweets and runs createTweetElement function on each tweet
+const renderTweets = function (tweets) {
   let $tweets = $(`<div></div>`);
   for (let i = tweets.length - 1; i > -1; i--) {
     $tweets.append(createTweetElement(tweets[i]));
@@ -46,16 +49,16 @@ const renderTweets = function(tweets) {
   return $tweets;
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   $.ajax('/tweets', { method: 'GET' })
-    .then(function(tweets) {
+    .then(function (tweets) {
       const $tweets = renderTweets(tweets);
       $('#tweets-container').append($tweets);
     });
 
-  $('.tweet-form').submit(function(event) {
+  $('.tweet-form').submit(function (event) {
     event.preventDefault();
-    
+
     const request = {
       url: '/tweets',
       method: 'POST',
@@ -73,7 +76,7 @@ $(document).ready(function() {
       $.ajax(request)
         .then(() => {
           $.ajax('/tweets', { method: 'GET' })
-            .then(function(tweets) {
+            .then(function (tweets) {
               const $tweet = $(`<div></div>`);
               $tweet.append(createTweetElement(tweets[tweets.length - 1]));
               $('#tweets-container').prepend($tweet);
