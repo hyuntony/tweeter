@@ -19,6 +19,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-- !["App in full screen"](https://github.com/hyuntony/tweeter/blob/master/docs/full-screen.png?raw=true)
-- !["App in screen below 1024px in width"](https://github.com/hyuntony/tweeter/blob/master/docs/1000px%20screen.png?raw=true)
-- !["New tweet textbox displaying counter"](https://github.com/hyuntony/tweeter/blob/master/docs/new-tweet-box.png?raw=true)
+App in full screen
+!["App in full screen"](https://github.com/hyuntony/tweeter/blob/master/docs/full-screen.png?raw=true)
+App in screen below 1024px in width
+!["App in screen below 1024px in width"](https://github.com/hyuntony/tweeter/blob/master/docs/1000px%20screen.png?raw=true)
+New tweet textbox displaying counter
+!["New tweet textbox displaying counter"](https://github.com/hyuntony/tweeter/blob/master/docs/new-tweet-box.png?raw=true)
