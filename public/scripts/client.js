@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -67,7 +68,7 @@ $(document).ready(function() {
     } else if (textArea.length > 140) {
       $('.error-message').text('Message is too long').slideDown();
     } else {
-      $('.error-message').text('Message is too long').slideUp();
+      $('.error-message').slideUp();
 
       $.ajax(request)
         .then(() => {
@@ -78,6 +79,7 @@ $(document).ready(function() {
               $('#tweets-container').prepend($tweet);
             });
         });
+
       $(this).find('#tweet-text').val('');
       $('.counter').text(140);
     }
